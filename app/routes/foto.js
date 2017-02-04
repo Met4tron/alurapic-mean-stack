@@ -1,8 +1,11 @@
-module.exports = function(app) {
-	
+module.exports = function (app) {
+
 	var api = app.api.foto;
+
 	app.get('/v1/fotos', api.lista);
-	
-	app.get('/v1/fotos/:id', api.buscaId);
-	
+
+	app.route('/v1/fotos/:id')
+		.get(api.buscaId)
+		.delete(api.removeId);
+
 };

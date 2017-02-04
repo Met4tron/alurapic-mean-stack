@@ -11,10 +11,17 @@ api.lista = function(req, res) {
 }
 api.buscaId = function(req, res) {
 	var foto = fotos.find(function(foto) {
-		return foto._id = req.params.id;
+		return foto._id == req.params.id;
 	});
 
 	res.json(foto);
 }
 
+api.removeId = function(req, res) {
+	fotos = fotos.filter(function(foto) {
+		return foto._id != req.params.id;
+	});
+
+	res.sendStatus(204);
+}
 module.exports = api;
