@@ -12,6 +12,7 @@
   "dependencies": {
     "consign": "^0.1.2",
     "express": "^4.13.3",
+    "jsonwebtoken": "^7.2.1",
     "mongoose": "^4.8.1"
   }
 }

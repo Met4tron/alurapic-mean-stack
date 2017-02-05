@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 var app = express();
 
 app.set('json spaces', 4);
-
+app.set('secret', 'homemavestruz');
 
 app.use(express.static('./public'));
 app.use(bodyParser.json());
